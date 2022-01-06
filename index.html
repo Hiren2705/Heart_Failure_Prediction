@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+     rel="stylesheet" 
+     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css">
+
+    <title>Heart Failure Prediction</title>
+</head>
+<body>
+    <!--Navbar-->
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+        <div class="container">
+          <a href="#" class="navbar-brand">Heart Failure Prediction</a>
+  
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navmenu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a href="#HF Prediction" class="nav-link">HF Prediction</a>
+              </li>
+              <li class="nav-item">
+                <a href="#questions" class="nav-link">FAQs</a>
+              </li>
+              <li class="nav-item">
+                <a href="#developers" class="nav-link">Developers</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <!--showcase-->
+    <section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+        <div class="container">
+            <div class="d-sm-flex align-items-center justify-content-between">
+
+                <div>
+                    <h1>Importance of <span class="text-warning">Model</span></h1>
+                    <p class="my-4 lead">
+                        Heart Failure is the most trepidatious organ failure for mankind. A person having his/her Heart Failure, a few seconds' delays may lead to death. The future is of the Nano-bio-sensors i.e. to determine certain levels of enzymes, stress, and metals through sensors receding inside the body of the nanoscale. 
+                    </p>
+                </div>
+                <img class="img-fluid w-70"
+             src="images/heart.jpg" alt="">
+
+            </div>
+            
+        </div>
+
+    </section>
+   
+                    
+    <!--model-->
+    <section id="HF Prediction" class="p-5 bg-danger bg-gradient border border-dark">
+        <div class="container">
+          <h3 text-allign-center>Fill the Following Information:</h3>
+          <div class="row align-items-center justify-content-between">
+            <div class="col-md p-5">
+              <div class="input-group inputs row align-items-center g-2 justify-content-between">
+        
+                  <div class="col-md-6 col-lg-4 p-1 ">
+                    <input type="number" class="form-control" placeholder="Age" />
+                  </div>
+                  <div class="col-md-6 col-lg-4 p-1">
+                    <select required class="form-control custom-select" >
+                      <option value="" disabled selected hidden>Gender</option>
+                      <option value="1">Male</option>
+                      <option value="2">Female</option>
+                      <option value="3">Other</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6 col-lg-4 p-1">
+                    <select required class="form-control custom-select" >
+                      <option value="" disabled selected hidden>Anaemia</option>
+                      <option value="1">Yes</option>
+                      <option value="2">No</option>
+                    </select> 
+                  </div>
+                  <div class="col-md-6 col-lg-4 p-1">
+                    <select required class="form-control custom-select" >
+                      <option value="" disabled selected hidden>Diabetes</option>
+                      <option value="1">Yes</option>
+                      <option value="2">No</option>
+                    </select> 
+                  </div>
+                  <div class="col-md-6 col-lg-4 p-1">
+                    <select required class="form-control custom-select" >
+                      <option value="" disabled selected hidden>High Blood Pressure</option>
+                      <option value="1">Yes</option>
+                      <option value="2">No</option>
+                    </select> 
+                  </div>
+
+                  <div class="col-md-6 col-lg-4 p-1">  
+                    <select required class="form-control custom-select" >
+                      <option value="" disabled selected hidden>Smoking</option>
+                      <option value="1">Yes</option>
+                      <option value="2">No</option>
+                    </select> 
+                  </div>
+
+                  <div class="col-md-6 col-lg-6 p-1">
+                    <input type="text" class="form-control" placeholder="CPK enzyme(mcg/L)" />
+                  </div>
+                  
+                  <div class="col-md-6 col-lg-6 p-1">  
+                    <input type="text" class="form-control" placeholder="Platelets(kiloplatelets/mL)" />
+                  </div>
+                  <div class="col-md-6 col-lg-6 p-1">
+                    <input type="text" class="form-control" placeholder="Serum Creatinine(mg/dL)" />
+                  </div>
+                  <div class="col-md-6 col-lg-6 p-1">
+                    <input type="text" class="form-control" placeholder="Serum Sodium(mEq/L)" />
+                  </div>
+                   
+                  <div class="col-md-6 col-lg-6">  
+                    <input type="text" class="form-control" placeholder="Ejection Fraction(%)" />
+                  </div>
+                  <div class="col-md-6 col-lg-6">    
+                    <span  class="text-dark"><small>(Percentage of blood leaving the heart at each contraction)</small></span>
+                  </div>
+                  
+              </div>
+            </div>
+
+              <div class="input-group outputs col-md p-5">
+                <input type="text" class="form-control" placeholder="Probability of Heart Failure" />
+              </div>
+
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section id="questions" class="p-5">
+        <div class="container">
+          <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+          <div class="accordion accordion-flush" id="questions">
+            <!-- Item 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#question-one"
+                >
+                  How model works?
+                </button>
+              </h2>
+              <div
+                id="question-one"
+                class="accordion-collapse collapse"
+                data-bs-parent="#questions"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                  beatae fuga animi distinctio perspiciatis adipisci velit maiores
+                  totam tempora accusamus modi explicabo accusantium consequatur,
+                  praesentium rem quisquam molestias at quos vero. Officiis ad
+                  velit doloremque at. Dignissimos praesentium necessitatibus
+                  natus corrupti cum consequatur aliquam! Minima molestias iure
+                  quam distinctio velit.
+                </div>
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#question-two"
+                >
+                Necessary precautions for healthy heart
+                </button>
+              </h2>
+              <div
+                id="question-two"
+                class="accordion-collapse collapse"
+                data-bs-parent="#questions"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                  beatae fuga animi distinctio perspiciatis adipisci velit maiores
+                  totam tempora accusamus modi explicabo accusantium consequatur,
+                  praesentium rem quisquam molestias at quos vero. Officiis ad
+                  velit doloremque at. Dignissimos praesentium necessitatibus
+                  natus corrupti cum consequatur aliquam! Minima molestias iure
+                  quam distinctio velit.
+                </div>
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#question-three"
+                >
+                  Medicines required
+                </button>
+              </h2>
+              <div
+                id="question-three"
+                class="accordion-collapse collapse"
+                data-bs-parent="#questions"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                  beatae fuga animi distinctio perspiciatis adipisci velit maiores
+                  totam tempora accusamus modi explicabo accusantium consequatur,
+                  praesentium rem quisquam molestias at quos vero. Officiis ad
+                  velit doloremque at. Dignissimos praesentium necessitatibus
+                  natus corrupti cum consequatur aliquam! Minima molestias iure
+                  quam distinctio velit.
+                </div>
+              </div>
+            </div>
+            <!-- Item 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#question-four"
+                >
+                  where to ger proper treatment
+                </button>
+              </h2>
+              <div
+                id="question-four"
+                class="accordion-collapse collapse"
+                data-bs-parent="#questions"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                  beatae fuga animi distinctio perspiciatis adipisci velit maiores
+                  totam tempora accusamus modi explicabo accusantium consequatur,
+                  praesentium rem quisquam molestias at quos vero. Officiis ad
+                  velit doloremque at. Dignissimos praesentium necessitatibus
+                  natus corrupti cum consequatur aliquam! Minima molestias iure
+                  quam distinctio velit.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    
+      <section id="developers" class="p-5 bg-primary">
+        <div class="container">
+          <h2 class="text-center text-white">Developers</h2>
+          <p class="lead text-center text-white mb-5">
+            Globaly Known as The Imperial Brains
+          </p>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="card bg-light">
+                <div class="card-body text-center">
+                  <img
+                    src="images/naman.png"
+                    class="rounded-circle mb-3"
+                    alt=""
+                  />
+                  <h3 class="card-title mb-3">Naman Dave</h3>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
+                  </p>
+                  <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                  <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                  <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                  <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-6 col-lg-4">
+              <div class="card bg-light">
+                <div class="card-body text-center">
+                  <img
+                    src="images/Hiren.jpeg"
+                    class="rounded-circle mb-3"
+                    alt=""
+                  />
+                  <h3 class="card-title mb-3">Hiren Chaudhary</h3>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
+                  </p>
+                  <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                  <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                  <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                  <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-6 col-lg-4">
+              <div class="card bg-light">
+                <div class="card-body text-center">
+                  <img
+                    src="images/pratik.jpg"
+                    class="rounded-circle mb-3"
+                    alt=""
+                  />
+                  <h3 class="card-title mb-3">Pratik Panchal</h3>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
+                  </p>
+                  <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                  <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                  <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                  <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-6 col-lg-4">
+              <div class="card bg-light">
+                <div class="card-body text-center">
+                  <img
+                    src="images/Deep.jpeg"
+                    class="rounded-circle mb-3"
+                    alt=""
+                  />
+                  <h3 class="card-title mb-3">Deep Patel</h3>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
+                  </p>
+                  <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                  <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                  <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                  <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-light">
+                  <div class="card-body text-center">
+                    <img
+                      src="images/Jigar.jpeg"
+                      class="rounded-circle mb-3"
+                      alt=""
+                    />
+                    <h3 class="card-title mb-3">Jigar Janzarukiya</h3>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
+                    </p>
+                    <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                    <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                    <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                    <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <div class="card bg-light">
+                  <div class="card-body text-center">
+                    <img
+                      src="images/Ishan.jpeg"
+                      class="rounded-circle mb-3"
+                      alt=""
+                    />
+                    <h3 class="card-title mb-3">Ishan Mehta</h3>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
+                    </p>
+                    <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                    <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                    <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                    <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="p-5 bg-dark text-white text-center position-relative">
+        <div class="container">
+          <p class="lead">Copyright &copy; 2021 Frontend Bootcamp</p>
+  
+          <a href="#" class="position-absolute bottom-0 end-0 p-5">
+            <i class="bi bi-arrow-up-circle h1"></i>
+          </a>
+        </div>
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous">
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
